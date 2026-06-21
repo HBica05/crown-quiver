@@ -4,7 +4,7 @@
 
 Crown & Quiver is the official website for the APU Archery Club — a community of young women at Asia Pacific University who are passionate about archery, personal growth, and teamwork. The site introduces the club to prospective members, explains its mission, vision, and rules, and gives students an easy way to sign up.
 
-🔗 The live link can be found here - *(add your GitHub Pages link once deployed)*
+🔗 The live link can be found here - https://crown-quiver.vercel.app/
 
 ![Mockup of the Crown & Quiver website on multiple devices](images/mockup-placeholder.png)
 
