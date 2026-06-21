@@ -29,10 +29,11 @@ if (joinForm) {
 const cursor = document.getElementById('customCursor');
 const trail = document.getElementById('cursorTrail');
 
-// Only run on devices with a real mouse (skip touch devices)
-const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-if (cursor && trail && hasFinePointer) {
+// Always initialize cursor tracking; CSS media queries handle hiding it
+// on touch-only devices. Relying on matchMedia('pointer: fine') here was
+// unreliable across some laptop trackpads/browsers and silently skipped
+// the whole feature on desktop in some cases.
+if (cursor && trail) {
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
   let trailX = mouseX;
@@ -44,13 +45,16 @@ if (cursor && trail && hasFinePointer) {
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursor.style.opacity = '1';
-    trail.style.opacity = '0.35';
   });
 
-  document.addEventListener('mouseleave', () => {
+  // Hide cursor only when it actually leaves the browser window
+  document.documentElement.addEventListener('mouseleave', () => {
     cursor.style.opacity = '0';
     trail.style.opacity = '0';
+  });
+  document.documentElement.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+    trail.style.opacity = '0.35';
   });
 
   // Rotate the arrow to face the direction of travel
