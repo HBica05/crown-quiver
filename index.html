@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crown & Quiver — APU Archery Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Arrow scroll-progress indicator -->
+  <div class="arrow-track">
+    <svg class="arrow-shaft" viewBox="0 0 4 1000" preserveAspectRatio="none">
+      <line x1="2" y1="0" x2="2" y2="1000" />
+    </svg>
+    <svg class="arrow-head" viewBox="0 0 40 40" width="28" height="28">
+      <path d="M20 2 L36 20 L20 38 L20 28 L4 28 L4 12 L20 12 Z"/>
+    </svg>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__brand">
+      <img src="images/logo.jpeg" alt="Crown & Quiver logo" class="nav__logo">
+      <span class="nav__title">Crown &amp; Quiver</span>
+    </div>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#activities">Activities</a>
+      <a href="#rules">Rules</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#join">Join Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">APU Archery Club</p>
+      <h1>Draw your bow.<br>Find your aim.<br>Rule your path.</h1>
+      <p class="hero__lede">
+        Crown &amp; Quiver is a community of young women at APU who are passionate
+        about archery, personal growth, and teamwork — a place to aim high,
+        challenge yourself, and grow both on and off the range.
+      </p>
+      <div class="hero__actions">
+        <a href="#join" class="btn btn--primary">Join the Club</a>
+        <a href="#about" class="btn btn--ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="target-rings">
+        <circle cx="200" cy="200" r="180" class="ring ring--1"/>
+        <circle cx="200" cy="200" r="135" class="ring ring--2"/>
+        <circle cx="200" cy="200" r="90"  class="ring ring--3"/>
+        <circle cx="200" cy="200" r="45"  class="ring ring--4"/>
+        <circle cx="200" cy="200" r="10"  class="ring ring--gold"/>
+        <line x1="60" y1="340" x2="200" y2="200" class="arrow-line"/>
+        <path d="M60 340 L80 320 L75 345 L100 350 Z" class="arrow-fletch"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section--alt">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>About the Club</h2>
+      <p>
+        Crown &amp; Quiver Archery Club is a community of young women who are passionate
+        about archery, personal growth, and teamwork. Inspired by courage, confidence,
+        and determination, our club provides a welcoming environment where members can
+        develop their archery skills while building leadership, discipline, and lasting
+        friendships.
+      </p>
+      <p>
+        Whether you're a beginner picking up a bow for the first time or an experienced
+        archer looking to improve, Crown &amp; Quiver encourages every member to aim high,
+        challenge themselves, and grow both on and off the range. Through training
+        sessions, friendly competitions, workshops, and social events, we strive to
+        empower girls to become confident, focused, and resilient individuals.
+      </p>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION -->
+  <section id="mission" class="section section--banner">
+    <div class="banner__item">
+      <span class="ring-mark ring-mark--small"></span>
+      <h3>Mission</h3>
+      <p>"At Crown &amp; Quiver Archery Club, we aim with grace, lead with courage, and
+         stand together with strength. Our mission is to create a supportive community
+         where young women can build confidence, develop leadership skills, and achieve
+         their goals through the discipline and spirit of archery."</p>
+    </div>
+    <div class="banner__divider" aria-hidden="true"></div>
+    <div class="banner__item">
+      <span class="ring-mark ring-mark--small"></span>
+      <h3>Vision</h3>
+      <p>"Crown &amp; Quiver aspires to be APU's leading girls' archery club, empowering
+         young women to lead with courage, discipline, and resilience through the sport
+         of archery."</p>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section class="section">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>Our Objectives</h2>
+      <ul class="quiver-list">
+        <li>Empower girls through archery by building confidence, courage, resilience, and self-esteem in a supportive community.</li>
+        <li>Develop discipline, patience, perseverance, and responsibility through regular training, supporting academic and personal growth.</li>
+        <li>Represent APU in inter-university archery competitions and sporting events.</li>
+        <li>Provide consistent, structured training sessions that help members progress from beginner to competitive level.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="section section--alt">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>Activities &amp; Training</h2>
+      <div class="card-row">
+        <div class="card">
+          <h4>Lesson Timetable</h4>
+          <p>Weekly training sessions, Tuesdays &amp; Thursdays, 5–7 PM at the APU
+             Sports Court. Beginner-friendly — equipment provided.</p>
+        </div>
+        <div class="card">
+          <h4>Ongoing Activities</h4>
+          <p>Skill-building drills, technique workshops, and social bonding events
+             that keep members improving and connected throughout the semester.</p>
+        </div>
+        <div class="card">
+          <h4>Competitions</h4>
+          <p>Friendly internal matches each semester, plus opportunities to
+             represent APU at inter-university archery competitions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES & SAFETY -->
+  <section id="rules" class="section">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>Rules &amp; Safety</h2>
+      <p>Safety on the range comes first — every member is expected to know and
+         follow these rules at all times.</p>
+      <ul class="quiver-list">
+        <li>Members must follow all instructions given by coaches and safety officers at all times.</li>
+        <li>Proper safety gear must be worn during all training sessions (arm guard, finger tab, etc.).</li>
+        <li>Bows and arrows must only be handled on the shooting line or under supervision.</li>
+        <li>Never point a bow or arrow at anyone, even if it is not loaded.</li>
+        <li>Always wait for the signal before shooting or retrieving arrows.</li>
+        <li>No running, pushing, or horseplay is allowed in the range area.</li>
+        <li>Members must check equipment before and after use and report any damage immediately.</li>
+        <li>Respect all members, coaches, and equipment at all times.</li>
+      </ul>
+
+      <h2 style="margin-top: 2.5rem;">Attire &amp; Equipment</h2>
+      <div class="card-row">
+        <div class="card">
+          <h4>Attire</h4>
+          <p>Comfortable fitted sportswear, closed-toe shoes, hair tied back,
+             and no dangling jewellery or accessories.</p>
+        </div>
+        <div class="card">
+          <h4>Safety Equipment</h4>
+          <p>Arm guard, finger tab or shooting glove, and chest guard
+             (recommended) — provided for beginners.</p>
+        </div>
+        <div class="card">
+          <h4>Archery Gear</h4>
+          <p>Recurve bow (club-approved), arrows, quiver, and a water bottle
+             for hydration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section--alt">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>Gallery</h2>
+      <p>A look at training sessions, events, and the Crown &amp; Quiver community
+         in action. (Photos to be added as the club's activities get underway.)</p>
+      <div class="card-row">
+        <div class="card gallery-placeholder">Training Session</div>
+        <div class="card gallery-placeholder">Workshop</div>
+        <div class="card gallery-placeholder">Competition Day</div>
+        <div class="card gallery-placeholder">Club Social</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section id="join" class="section section--cta">
+    <div class="section__marker"><span class="ring-mark"></span></div>
+    <div class="section__body">
+      <h2>Ready to Pick Up a Bow?</h2>
+      <p>Membership is open to all APU students — no archery experience needed.
+         Fill in the form below and a club officer will reach out with the next
+         steps.</p>
+
+      <form class="join-form">
+        <div class="join-form__row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Charlie Chaplin" required>
+        </div>
+        <div class="join-form__row">
+          <label for="email">APU Email</label>
+          <input id="email" name="email" type="email" placeholder="TPxxxxxx@mail.apu.edu.my" required>
+        </div>
+        <div class="join-form__row">
+          <label for="experience">Archery Experience</label>
+          <select id="experience" name="experience">
+            <option>No experience — total beginner</option>
+            <option>Some experience</option>
+            <option>Competitive / experienced archer</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="footer">
+    <div class="footer__brand">
+      <img src="images/logo.jpeg" alt="Crown & Quiver logo" class="nav__logo">
+      <span class="nav__title">Crown &amp; Quiver</span>
+    </div>
+    <p>APU Archery Club · Asia Pacific University, Kuala Lumpur</p>
+    <div class="footer__links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="mailto:crownquiver@apu.edu.my">crownquiver@apu.edu.my</a>
+    </div>
+    <p class="footer__copy">© 2026 Crown &amp; Quiver — APU Archery Club</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
