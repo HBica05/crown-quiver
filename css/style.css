@@ -434,7 +434,7 @@ a, button, input, select, .btn, .join-form .btn, label {
   height: 26px;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0;
+  opacity: 1;
   transform: translate(-50%, -50%);
   transition: opacity 0.2s ease;
   will-change: transform, left, top;
@@ -466,7 +466,7 @@ a, button, input, select, .btn, .join-form .btn, label {
   height: 8px;
   border-radius: 50%;
   background: var(--copper);
-  opacity: 0;
+  opacity: 0.35;
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
