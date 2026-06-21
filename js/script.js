@@ -24,3 +24,68 @@ if (joinForm) {
     joinForm.reset();
   });
 }
+
+// ---------- Custom Arrow Cursor ----------
+const cursor = document.getElementById('customCursor');
+const trail = document.getElementById('cursorTrail');
+
+// Only run on devices with a real mouse (skip touch devices)
+const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+if (cursor && trail && hasFinePointer) {
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let trailX = mouseX;
+  let trailY = mouseY;
+  let lastX = mouseX;
+  let lastY = mouseY;
+  let currentAngle = -45; // default arrow heading (pointing up-right)
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.opacity = '1';
+    trail.style.opacity = '0.35';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+    trail.style.opacity = '0';
+  });
+
+  // Rotate the arrow to face the direction of travel
+  function updateCursor() {
+    const dx = mouseX - lastX;
+    const dy = mouseY - lastY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Only update angle when actually moving, to avoid jitter when still
+    if (distance > 1.5) {
+      const targetAngle = Math.atan2(dy, dx) * (180 / Math.PI);
+      currentAngle = targetAngle;
+    }
+
+    cursor.style.left = `${mouseX}px`;
+    cursor.style.top = `${mouseY}px`;
+    cursor.style.transform = `translate(-50%, -50%) rotate(${currentAngle + 45}deg)`;
+
+    // Trailing dot eases toward the cursor position for a "comet tail" feel
+    trailX += (mouseX - trailX) * 0.18;
+    trailY += (mouseY - trailY) * 0.18;
+    trail.style.left = `${trailX}px`;
+    trail.style.top = `${trailY}px`;
+
+    lastX = mouseX;
+    lastY = mouseY;
+
+    requestAnimationFrame(updateCursor);
+  }
+  requestAnimationFrame(updateCursor);
+
+  // Slightly enlarge the cursor when hovering interactive elements
+  const interactiveSelectors = 'a, button, input, select, .btn, label';
+  document.querySelectorAll(interactiveSelectors).forEach((el) => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
+  });
+}
